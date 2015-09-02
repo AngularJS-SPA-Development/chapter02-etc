@@ -17,6 +17,8 @@ app.directive('mobiconFancybox', function($compile, $templateCache) {
         var template = getTemplate(templateId);
         var popOverContent = $compile(template)($scope);
 
+        console.log('popOverContent: ', popOverContent);
+
         // 팬시박스 오픈
         $.fancybox.open({
           content: popOverContent,
